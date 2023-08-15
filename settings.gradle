@@ -1,0 +1,3 @@
+rootProject.name = 'news'
+include 'news_management_system'
+include 'news_logging'

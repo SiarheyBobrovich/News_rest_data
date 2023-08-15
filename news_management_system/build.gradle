@@ -1,0 +1,55 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.0'
+	id 'io.spring.dependency-management' version '1.1.0'
+//	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
+}
+
+sourceSets {
+	main {
+		java {
+			srcDir "$buildDir/generated-source"
+		}
+	}
+}
+
+group 'by.control'
+version '1.0-SNAPSHOT'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.postgresql:postgresql'
+	implementation 'org.projectlombok:lombok'
+	implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.liquibase:liquibase-core:4.23.0'
+	implementation 'org.springframework.kafka:spring-kafka'
+
+	annotationProcessor 'org.projectlombok:lombok'
+	annotationProcessor 'com.querydsl:querydsl-apt:5.0.0:general'
+	annotationProcessor 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final'
+	annotationProcessor 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+	annotationProcessor 'jakarta.annotation:jakarta.annotation-api:2.1.1'
+
+	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+//
+//querydsl {
+//	jpa = true
+//	querydslSourcesDir = "$buildDir/generated-source"
+//}
+//
+//compileQuerydsl {
+//	options.annotationProcessorPath = configurations.querydsl
+//}
+
+test {
+	useJUnitPlatform()
+}

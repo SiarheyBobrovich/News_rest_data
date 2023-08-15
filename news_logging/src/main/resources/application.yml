@@ -1,0 +1,9 @@
+spring:
+  kafka:
+    consumer:
+      properties:
+        spring.json.trusted.packages: by.news.logging.data.Log
+    bootstrap-servers: localhost:29092
+    topic: log
+server:
+  port: 8081
