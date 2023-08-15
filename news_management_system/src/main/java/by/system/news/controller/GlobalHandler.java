@@ -1,4 +1,4 @@
-package by.control.news.controller;
+package by.system.news.controller;
 
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.ResponseEntity;

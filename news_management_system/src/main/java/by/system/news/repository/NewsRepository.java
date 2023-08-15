@@ -2,7 +2,6 @@ package by.system.news.repository;
 
 import by.system.news.entity.News;
 import by.system.news.entity.QNews;
-import com.querydsl.core.types.dsl.SimpleExpression;
 import com.querydsl.core.types.dsl.StringExpression;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
