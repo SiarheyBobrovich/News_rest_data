@@ -2,7 +2,6 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.1.0'
 	id 'io.spring.dependency-management' version '1.1.0'
-//	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
 }
 
 sourceSets {
@@ -29,6 +28,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.liquibase:liquibase-core:4.23.0'
 	implementation 'org.springframework.kafka:spring-kafka'
+	implementation 'org.springframework.boot:spring-boot-starter-amqp'
 
 	annotationProcessor 'org.projectlombok:lombok'
 	annotationProcessor 'com.querydsl:querydsl-apt:5.0.0:general'
@@ -40,15 +40,6 @@ dependencies {
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
-//
-//querydsl {
-//	jpa = true
-//	querydslSourcesDir = "$buildDir/generated-source"
-//}
-//
-//compileQuerydsl {
-//	options.annotationProcessorPath = configurations.querydsl
-//}
 
 test {
 	useJUnitPlatform()

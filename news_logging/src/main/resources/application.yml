@@ -2,7 +2,12 @@ spring:
   kafka:
     consumer:
       properties:
-        spring.json.trusted.packages: by.news.logging.data.Log
+        spring:
+          json:
+            trusted:
+              packages: by.system.news.data
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
     bootstrap-servers: localhost:29092
     topic: log
 server:
