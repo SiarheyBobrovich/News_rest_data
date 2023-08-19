@@ -1,3 +1,4 @@
 rootProject.name = 'news'
 include 'news_management_system'
 include 'news_logging'
+include 'news_logging_rabbit'

@@ -1,0 +1,10 @@
+spring:
+  rabbitmq:
+    consumer:
+      logging:
+        queue: news_log
+        exchange: news_exchange
+        routing:
+          key: news.routing.key
+server:
+  port: 8082
